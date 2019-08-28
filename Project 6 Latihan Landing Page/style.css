@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(bg.jpg) no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+  animation: anim 30s linear infinite;
+}
+
+@keyframes anim {
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  padding: 0 40px;
+  box-sizing: border-box;
+  font-weight: 900;
+}
+
+.content p {
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.content a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fecd57;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  transition: 0.4s linear;
+  font-weight: 900;
+  border-radius: 20px;
+}
+
+.content a:hover {
+  color: #fff;
+  background: #fecd57;
+}
+
+.header {
+  font-weight: bolder;
+  color: #fecd57;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
